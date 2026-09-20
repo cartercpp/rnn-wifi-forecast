@@ -199,7 +199,7 @@ int main()
     std::deque<double> mbpsHistory;
     std::deque<sample> displayHistory;
 
-    recurrent_neural_network trafficNN(contextLength, 0.01); // 0.01 = learning rate
+    recurrent_neural_network trafficNN(contextLength, 0.5); // 0.5 = learning rate
 
     std::uint64_t prevBytes = getRxBytes();
     auto startInterval = std::chrono::steady_clock::now();
